@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bet App</title>
+    <!-- Скрипт для связи с Telegram (закрытие окна, цвета темы и т.д.) -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Библиотека TON Connect UI -->
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+</head>
+<body>
+    <h1>Спор на 1 TON</h1>
+    
+    <!-- Пустой контейнер. Сюда JS встроит синюю кнопку -->
+    <div id="ton-connect"></div> 
+
+    <script>
+        // Сообщаем Telegram, что приложение готово к отображению
+        window.Telegram.WebApp.ready();
+
+        // Инициализируем TON Connect
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            // ВАЖНО: Здесь должна быть прямая ссылка на твой JSON манифест!
+            manifestUrl: 'https://твой-домен.com/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect'
+        });
+    </script>
+</body>
+</html>
