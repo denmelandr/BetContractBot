@@ -21,7 +21,7 @@ def get_profile_keyboard() -> ReplyKeyboardMarkup:
     
     builder.add(KeyboardButton(
         text="Поспорить", 
-        web_app=WebAppInfo(url="https://google.com")
+        web_app=WebAppInfo(url="https://denmelandr.github.io/BetContractBot/")
     ))
     
     return builder.as_markup(resize_keyboard=True)
